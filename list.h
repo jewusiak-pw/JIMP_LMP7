@@ -8,12 +8,8 @@ typedef struct e {
 } * list_t;
 */
 
-typedef struct element {
-    int nmbr;
-} element;
+//*l - wektor, li - liczba linii, n - linia
+int *dodaj_do_listy( int *l, int li, int n );
 
-typedef struct
-
-void dodaj_do_listy( element l, , int n );
 
 #endif

@@ -7,7 +7,7 @@ typedef struct {
 	int ile_slow;
 	char **slowa;  
 	int *licznik;   // w ilu liniach występują słowa
-	list_t *linie;  // listy zawierające nr linii zawierajacych
+	int **linie;  // listy zawierające nr linii zawierajacych
 } skorowidz_t;
 	
 void zainicjuj_skorowidz( int argc, char **argv, skorowidz_t *s );

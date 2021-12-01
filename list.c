@@ -1,7 +1,7 @@
 #include "list.h"
 
 #include <stdlib.h>
-
+/*
 list_t dodaj_do_listy( list_t l, int n ) {
   // dopisuje nowy element na koniec listy l
   // nowy element przechowuje n (jego nmbr == n)
@@ -19,4 +19,11 @@ list_t dodaj_do_listy( list_t l, int n ) {
 		tmp->next->next= NULL;
 		return l;
 	}
+}*/
+
+int *dodaj_do_listy( int *l, int li, int n ){
+    l= realloc(l,(li+1)*sizeof *l);
+    l[li]=n;
+    return l;
+
 }
