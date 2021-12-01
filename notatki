@@ -1,0 +1,16 @@
+Ćwiczenie do 10.12, zespoły 2-os:
+
+projekt graficzny modyfikacji, podziału kodu (podział na moduły, interfejs funkcji, struktury, zależności pomiędzy modułami) - pdf
+
+zamiana listy liniowej na wektor o zmiennej długości do przechowywania numerów linii
+
+poprawa wyszukiwania słów we fragmentach innych słów
+
+plik makefile
+
+Przypadki (:
+    - czy przed słowiem nie jest początek pliku?
+    - czy nie jest koniec pliku
+    - jeżeli znak przed slowem nie jest [A-Z] i [a-z], i znak po slowie nie jest [A-Z] i [a-z] to wtedy słowo jest pojedyncze
+    - A=65, Z=90, a=97, z=122
+
