@@ -13,4 +13,24 @@ Przypadki (:
     - czy nie jest koniec pliku
     - jeżeli znak przed slowem nie jest [A-Z] i [a-z], i znak po slowie nie jest [A-Z] i [a-z] to wtedy słowo jest pojedyncze
     - A=65, Z=90, a=97, z=122
-
+-sprawdzam czy wzorzec jest w linijce
+-jeśli tak:
+    -sprawdzam czy pierwsze słowo po strstr ma długość wzorca
+    jeśli ma:
+        -sprawdzam czy znak poprzedni jest w zakresie literek
+        jeśli nie:
+            -zwróć linijkę
+            -koniec
+        jeśli tak:
+            -sprawdź czy w reszcie tekstu znajduje się wzorzec
+            - operacje z linijki 17
+    jeśli nie ma:
+        -sprawdź czy w reszcie tekstu znajduje się wzorzec
+        jeśli tak:
+            -operacje z linijki 17
+            
+     
+                
+            
+        
+            
