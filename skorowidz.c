@@ -26,13 +26,13 @@ void wypisz_skorowidz( skorowidz_t *skorowidz ) {
   for( i= 0; i < skorowidz->ile_slow; i++ ) {
     if( skorowidz->licznik[i] > 0 ) {
 			int *tmp= skorowidz->linie[i];
-      printf( "słowo \"%s\" wystąpiło w liniach:", skorowidz->slowa[i] );
+      printf( "słowo \"%s\" wystapilo w liniach:", skorowidz->slowa[i] );
       for( j=0;j<skorowidz->licznik[i];j++ )
         printf( " %d", tmp[j] );
 
       printf( "\n" );
     } else {
-      printf( "nie napotkano słowa \"%s\"\n", skorowidz->slowa[i] );
+      printf( "nie napotkano slowa \"%s\"\n", skorowidz->slowa[i] );
     }
   }
 }
