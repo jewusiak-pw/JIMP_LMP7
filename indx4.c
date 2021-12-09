@@ -31,13 +31,53 @@ int main(int argc, char **argv) {
     }
 
     nr_linii = 0;
-    while (fgets(buf, BUFSIZE, in) != NULL) {
-        nr_linii++;
-        for (i = 0; i < skorowidz.ile_slow; i++)
-            if (strstr(buf, skorowidz.slowa[i]) != NULL) {
-                dodaj_pozycje_skorowidza(&skorowidz, i, nr_linii);
-            }
+  char *p;
+  int dl;
+  int ile;
+  int j;
+  int k;
+  while( fgets( buf, BUFSIZE, in ) != NULL )
+  {
+    nr_linii++;
+    dl=strlen(buf);
+    for( i= 0; i < skorowidz.ile_slow; i++ )
+    {
+        p=strstr(buf,skorowidz.slowa[i]);
+        while(p!=NULL)
+        {
+                ile=0;
+                j=0;
+                for(j;j<strlen(p);j++)
+                {
+                        if( (p[j]>=65 && p[j]<=90) || (p[j]>=97 && p[j]<=122) )
+                        {
+                                ile+=1;
+                        }
+                        else
+                        {
+                                break;
+                        }
+                }
+                if( strlen(skorowidz.slowa[i])==ile )
+                {
+                        k=(dl-strlen(p)-1);
+                        if( strlen(p)==dl )
+                        {
+                                dodaj_pozycje_skorowidza( &skorowidz,i,nr_linii );
+                                break;
+                        }
+                        if ( p[k]<65 || (p[k]>90 && p[k]<97) || p[k]>122 )
+                        {
+                                dodaj_pozycje_skorowidza( &skorowidz,i,nr_linii );
+                                break;
+                        }
+                }
+                p+=1;
+                p=strstr(p,skorowidz.slowa[i]);
+        }
     }
+  }
+
 
     wypisz_skorowidz(&skorowidz);
 
